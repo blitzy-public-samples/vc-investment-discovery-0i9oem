@@ -1,0 +1,54 @@
+{
+  "development": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "vc_investment_discovery_dev",
+    "username": "dev_user", 
+    "password": "dev_password",
+    "dialect": "postgres",
+    "logging": true,
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "acquire": 30000,
+      "idle": 10000
+    }
+  },
+  "test": {
+    "host": "localhost", 
+    "port": 5432,
+    "database": "vc_investment_discovery_test",
+    "username": "test_user",
+    "password": "test_password",
+    "dialect": "postgres",
+    "logging": false,
+    "pool": {
+      "max": 5,
+      "min": 0,
+      "acquire": 30000,
+      "idle": 10000
+    }
+  },
+  "production": {
+    "host": "${DB_HOST}",
+    "port": "${DB_PORT}",
+    "database": "${DB_NAME}",
+    "username": "${DB_USERNAME}",
+    "password": "${DB_PASSWORD}",
+    "dialect": "postgres",
+    "logging": false,
+    "pool": {
+      "max": 10,
+      "min": 2,
+      "acquire": 30000,
+      "idle": 10000
+    },
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
